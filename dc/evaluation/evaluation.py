@@ -162,7 +162,7 @@ class Evaluation:
             wer_score = 0
             print(len(gold_temp))
             for i in range(0, len(gold_temp)):
-                error = wer(result_temp[i], gold_temp[i])
+                error = wer(gold_temp[i], result_temp[i])
                 print("Prediction ", i, " error: ", error)
                 wer_score += error
             print("WER =", wer_score/len(gold_temp))
